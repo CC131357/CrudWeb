@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>DengluServlet</servlet-name>
+        <servlet-class>com.servlet.DengluServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ZhuceServlet</servlet-name>
+        <servlet-class>com.servlet.ZhuceServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Searchall</servlet-name>
+        <servlet-class>com.servlet.Searchall</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.servlet.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>com.servlet.UpdateServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DengluServlet</servlet-name>
+        <url-pattern>/DengluServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ZhuceServlet</servlet-name>
+        <url-pattern>/ZhuceServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Searchall</servlet-name>
+        <url-pattern>/Searchall</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/UpdateServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+    <welcome-file-list>
+        <welcome-file>denglu.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
